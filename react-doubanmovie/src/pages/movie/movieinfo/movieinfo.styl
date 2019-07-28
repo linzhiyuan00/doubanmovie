@@ -1,0 +1,113 @@
+.movie-detail
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #f0f0f0
+  z-index: 1
+  .movie-header
+    z-index 100
+
+.movieinfo-bg
+  position absolute
+  top: 50px
+  width 100%
+  height 200px
+  z-index -1
+.bgimg
+  position absolute 
+  z-index -1
+  width 100%
+  height 100%
+  filter: blur(40px)
+  img
+    width 100%
+    height 100% 
+    background-size contain
+
+.movie-body
+  width 100%
+  height 100%
+  .movie-top
+    width 100%
+    height 190px
+    margin-top: 50px
+    .left
+      float left
+      padding: 20px
+      img
+        width 107px
+        height 150px
+    .right
+      float left
+      padding: 20px 0 
+      text-align: left 
+      .title
+        color: #ffffff
+        font-size 19px
+        margin-bottom: 2px
+      .titleaka
+        color: #ffffff
+        font-size 11px
+      .rating
+        color: #ffc600
+        font-size 20px
+        margin: 10px 0
+      .genres
+        color: #e8e8e8
+        font-size 13px
+      .dur-place
+        color: #e8e8e8
+        font-size 13px
+        margin-right 5px
+      .pubdate
+        color: #e8e8e8
+        font-size 13px
+
+.movie-container
+  background #f4f4f4
+  width 100%
+  height 100%
+  .movie-summary
+    background #ffffff
+    padding: 5px
+    .buybtn
+      width 94%
+      margin: 10px 3%
+      height 36px
+      border-radius: 30px
+      background #e54847
+      text-align: center
+      line-height: 35px
+      font-size 18px
+      color: #ffffff
+
+
+.introduce
+    background: #fff;
+    font-size: 15px;
+    line-height:30px;
+    color: #555555
+    padding: 5px;
+
+.introduce p
+    height: 50px;
+    overflow: hidden;
+
+#introduce:checked + p
+    height: auto;
+
+#introduce:checked ~ label[for="introduce"] img
+    transform: rotate(180deg);
+ 
+.introduce label
+    width: 25px;
+    height 20px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+
+#introduce
+    display:none;
+
