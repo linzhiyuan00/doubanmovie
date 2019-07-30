@@ -6,9 +6,9 @@ class Cinema extends Component {
       return (  
         <div>
           <div className="header">
-          影院
+          榜单
         </div>
-          影院</div>
+          榜单</div>
       );
   }
 }

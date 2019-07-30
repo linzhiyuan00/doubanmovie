@@ -9,17 +9,17 @@ class Scroll extends Component {
       this.bscrol.refresh();
     }
   }
-  // componentDidMount(){
-  //   if(!this.bscrol){
-  //     this.bscrol = new BScroll(this.refs.scrollView,{
-  //       probeType:3,
-  //       click:() =>{}
-  //     })
-  //     this.bscrol.on('scroll',(e) =>{
-  //       this.props.onScroll(e);
-  //     })
-  //   }
-  // }
+  componentDidMount(){
+    // if(!this.bscrol){
+    //   this.bscrol = new BScroll(this.refs.scrollView,{
+    //     probeType:3,
+    //     click:() =>{}
+    //   })
+    //   this.bscrol.on('scroll',(e) =>{
+    //     this.props.onScroll(e);
+    //   })
+    // }
+  }
   componentWillUnmount(){
     this.bscrol = null;
   }

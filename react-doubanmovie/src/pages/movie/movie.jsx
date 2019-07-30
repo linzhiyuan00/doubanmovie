@@ -19,7 +19,7 @@ class Movie extends Component {
       <Router>
         <div className="movie">
           <div className="header">
-            猫眼电影
+            豆瓣电影
         </div>
           <div className="topbar">
             <div className="showtab">

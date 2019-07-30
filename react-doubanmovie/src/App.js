@@ -6,7 +6,7 @@ import cinema from './pages/cinema/cinema';
 import mine from './pages/mine/mine';
 import './App.styl';
 import moviepng from './assets/movie.png'
-import cinemapng from './assets/cinema.png'
+import listpng from './assets/list.png'
 import minepng from './assets/mine.png'
 
 
@@ -26,9 +26,9 @@ function App() {
           <div className="tabbar-item">
             <NavLink className="nav-link" to="/cinema">
             <div className="tabbar-image">
-                <img alt="" src={cinemapng}></img>
+                <img alt="" src={listpng}></img>
               </div>
-              <span>影院</span></NavLink>
+              <span>榜单</span></NavLink>
           </div>
           <div className="tabbar-item">
             <NavLink className="nav-link" to="/mine">

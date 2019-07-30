@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Lazyload from 'react-lazyload';
+import Lazyload , { forceCheck } from 'react-lazyload';
 import { Route } from 'react-router-dom';
 import Scroll from '../../../common/scroll/Scroll';
-import { getmovieonshowlist,getmovieinfo } from '../../../api/apifun';
+import { getmovieonshowlist } from '../../../api/apifun';
 import { createMovieListByItem } from '../../../model/movie'
 import Loading from '../../../common/loading/Loading'
 
@@ -93,7 +93,9 @@ class OnShow extends Component {
     const { match } = this.props; 
     return (
       <div className="onshow">
-        <Scroll refresh={refreshScroll}>
+        <Scroll refresh={refreshScroll}
+        onScroll={forceCheck}
+        >
           <div className="movielist">
             {
               this.renderMovielist()
