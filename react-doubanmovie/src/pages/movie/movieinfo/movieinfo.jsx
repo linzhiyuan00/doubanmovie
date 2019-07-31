@@ -54,7 +54,7 @@ class MovieInfo extends Component {
       return (
         <div className="cast" key={cast.id}>
           <div className="castimg">
-            <img src={this.getImage(cast.avatars)} alt="" />
+            <img src={this.getImage(cast.avatars)} width="65px" height="90px" alt="" />
           </div>
           <div className="castname">
             {cast.name}
@@ -71,14 +71,12 @@ class MovieInfo extends Component {
       <CSSTransition in={this.state.isShow} timeout={2000} classNames="translate">
         <div className="movie-detail">
           <Header title={movieinfo.title} ref="header"></Header>
-          <Scroll onScroll={() => { }} refresh>
-            <div className="scrollbox">
               <div className="movieinfo-bg" style={{ position: "absolute" }}>
                 <div className="bgimg">
                   <img src={this.getImage(movieinfo.images)} alt="" />
                 </div>
               </div>
-              <div className="movie-body">
+              <div className="movie-body" style={{ backgroundImage:`url(${movieinfo.images})`}} >
                 <div className="movie-top">
                   <div className="left">
                     <img src={this.getImage(movieinfo.images)} alt="" />
@@ -110,13 +108,14 @@ class MovieInfo extends Component {
                 </div>
                 <div className="movie-container">
                   <div className="movie-summary">
-                    <div className="buybtn">特惠购票</div>
+                    <div className="buybtn">收藏</div>
                     <div className="introduce">
                       <input type="checkbox" id="introduce" />
                       <p>{movieinfo.summary}</p>
                       <label htmlFor="introduce"><img src={arrow} alt="" /></label>
                     </div>
                   </div>
+                  <div className="casttitle">主演：</div>
                   <div className="castlist">
                     {
                       this.rendercastlist()
@@ -124,8 +123,6 @@ class MovieInfo extends Component {
                   </div>
                 </div>
               </div>
-            </div>
-          </Scroll>
         </div >
       </CSSTransition >
     );
