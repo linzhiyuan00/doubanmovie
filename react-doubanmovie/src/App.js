@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect, NavLink } from "react-router-dom";
 import './App.css';
 import movie from './pages/movie/movie';
-import cinema from './pages/cinema/cinema';
+import list from './pages/list/list';
 import mine from './pages/mine/mine';
 import './App.styl';
 import moviepng from './assets/movie.png'
@@ -24,7 +24,7 @@ function App() {
               </NavLink>
           </div>
           <div className="tabbar-item">
-            <NavLink className="nav-link" to="/cinema">
+            <NavLink className="nav-link" to="/list">
             <div className="tabbar-image">
                 <img alt="" src={listpng}></img>
               </div>
@@ -43,7 +43,7 @@ function App() {
         </div>
         <Switch>
           <Route path="/movie" component={movie}></Route>
-          <Route path="/cinema" component={cinema}></Route>
+          <Route path="/list" component={list}></Route>
           <Route path="/mine" component={mine}></Route>
           {/* <Route path="/" component={Recommand}></Route> */}
           <Redirect from="/" to="/movie"></Redirect>

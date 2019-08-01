@@ -13,6 +13,9 @@ class Movie extends Component {
       refreshScroll: false
     }
   }
+  componentDidMount() {
+    document.title = '豆瓣电影'
+  }
   render() {
     const { refreshScroll } = this.state
     return (
@@ -20,7 +23,7 @@ class Movie extends Component {
         <div className="movie">
           <div className="header">
             豆瓣电影
-        </div>
+          </div>
           <div className="topbar">
             <div className="showtab">
               <div className="tabitem">
@@ -33,7 +36,7 @@ class Movie extends Component {
                 <NavLink className="navlink" to="/WillShow" activeClassName="onactive"><span className="tabname">即将上映</span></NavLink>
               </div>
               <div className="tabitem">
-                <NavLink className="navlink" to="/Search" activeClassName="searchactive" ><span className="search"><img src={searchpng} alt=""/></span></NavLink>
+                <NavLink className="navlink" to="/Search" activeClassName="searchactive" ><span className="search"><img src={searchpng} alt="" /></span></NavLink>
               </div>
 
             </div>

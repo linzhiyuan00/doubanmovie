@@ -9,18 +9,11 @@
   .movie-header
     z-index 10
 
-.scrollbox
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width 100%
-  height 100%
 .movieinfo-bg
   position absolute
   top: 50px
   width 100%
-  height 200px
+  height 100%
   z-index -1
 .bgimg
   position absolute 
@@ -28,12 +21,9 @@
   width 100%
   height 100%
   filter: blur(40px)
-  img
-    width 100%
-    height 100% 
-    background-size contain
 
 .movie-body
+  position relative
   width 100%
   height 100%
   .movie-top
@@ -75,8 +65,8 @@
 .movie-container
   position: absolute;
   left: 0;
-  top: 250px;
-  overflow: hidden;
+  // top: 250px;
+  overflow-y: scroll;
   background #f4f4f4
   width 100%
   height 100%

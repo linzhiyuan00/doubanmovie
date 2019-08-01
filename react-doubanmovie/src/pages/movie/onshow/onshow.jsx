@@ -93,15 +93,15 @@ class OnShow extends Component {
     const { match } = this.props; 
     return (
       <div className="onshow">
-        <Scroll refresh={refreshScroll}
+        {/* <Scroll refresh={refreshScroll}
         onScroll={forceCheck}
-        >
+        > */}
           <div className="movielist">
             {
               this.renderMovielist()
             }
           </div>
-        </Scroll>
+        {/* </Scroll> */}
         <Loading title="正在加载中..." show={this.state.show} />
         <Route path={`${match.url}/:id`} component={MovieInfo}></Route>
       </div>
