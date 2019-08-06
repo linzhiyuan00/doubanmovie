@@ -12,6 +12,7 @@ class Header  extends Component {
     console.log('返回')
   }
   render() { 
+    console.log('操你妈')
       return ( 
         <div className="music-header">
           <span className="header-back" onClick={this.handleback}>

@@ -129,47 +129,6 @@ class MovieInfo extends Component {
                     this.rendercastlist()
                   }
                 </div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>00000000</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>0000000</div>
-                <div>00000000</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>0000000</div>
-                <div>00000000</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>0000000</div>
-                <div>00000000</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>0000000</div>
-                <div>00000000</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>1112222</div>
-                <div>0000000</div>
-                <div>00000000</div>
-                <div>999999</div>
-                <div>1555522</div>
-                <div>888888822</div>
-                <div>0000000</div>
               </div>
           </div>
         </div >

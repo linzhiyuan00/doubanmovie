@@ -3,11 +3,13 @@ import Lazyload from 'react-lazyload';
 import { Route } from 'react-router-dom';
 import Scroll from '../../../common/scroll/Scroll';
 import { getmoviewillshowlist } from '../../../api/apifun';
-import { createMovieListByItem } from '../../../model/movie'
+import { createMovieListByItem } from '../../../model/movie';
 import Loading from '../../../common/loading/Loading'
 
 import './willshow.styl'
 import MovieInfo from '../movieinfo/movieinfo';
+import Img from '../../../common/imgerror/Img';
+import defaultimg from '../../../assets/defaultimg.png';
 
 
 class WillShow extends Component {
@@ -16,23 +18,23 @@ class WillShow extends Component {
     movielist: [],
     refreshScroll: false
   }
-  getImage(url){
+  getImage(url) {
     // 把现在的图片连接传进来，返回一个不受限制的路径
-    if(url !== undefined){
-      return url.replace(/^(http)[s]*(\:\/\/)/,'https://images.weserv.nl/?url=');
+    if (url !== undefined) {
+      return url.replace(/^(http)[s]*(\:\/\/)/, 'https://images.weserv.nl/?url=');
     }
   }
-  ifonshow(rating){
-    if(rating == 0) {
+  ifonshow(rating) {
+    if (rating == 0) {
       return false
-    }else{
+    } else {
       return true
     }
   }
-  handleToMovieDetail(url){
-    return () =>{
+  handleToMovieDetail(url) {
+    return () => {
       this.props.history.push({
-        pathname:url
+        pathname: url
       })
     }
   }
@@ -53,22 +55,22 @@ class WillShow extends Component {
       const movie = createMovieListByItem(item);
       return (
         <div className="movie-wrapper" key={movie.id}
-        onClick={this.handleToMovieDetail(`${match.url}/${movie.id}`)}
+          onClick={this.handleToMovieDetail(`${match.url}/${movie.id}`)}
         >
           <div className="left">
             <Lazyload>
-              <img src={this.getImage(movie.img)} width="64px" height="90px" alt="" />
+              <Img imageUrl={this.getImage(movie.img)} defaultImg={defaultimg} alt="" />
             </Lazyload>
           </div>
           <div className="right">
             <div className="moviename">
               {movie.name}
             </div>
-            <div className="rating" style={{display: this.ifonshow(movie.rating) ? 'inline-block' : 'none'}}>
+            <div className="rating" style={{ display: this.ifonshow(movie.rating) ? 'inline-block' : 'none' }}>
               <span className="ratingtext">观众评</span>
               <span className="ratingnum">{movie.rating}</span>
             </div>
-            <div className="wantsee" style={{display: this.ifonshow(movie.rating) ? 'none' : 'inline-block'}}>
+            <div className="wantsee" style={{ display: this.ifonshow(movie.rating) ? 'none' : 'inline-block' }}>
               <span className="peoplenum">{movie.count}</span>
               <span className="wantseetext">人想看</span>
             </div>
@@ -88,7 +90,7 @@ class WillShow extends Component {
   }
   render() {
     const { refreshScroll } = this.state
-    const { match } = this.props; 
+    const { match } = this.props;
     return (
       <div className="onshow">
         <Scroll refresh={refreshScroll}>

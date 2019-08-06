@@ -30,7 +30,7 @@ class List extends Component {
                 <NavLink className="navlink" to="/NorthTop" activeClassName="onactive"><span className="tabname">北美票房榜</span></NavLink>
               </div>
               <div className="tabitem">
-                <NavLink className="navlink" to="/GoodTop" activeClassName="onactive"><span className="tabname">口碑榜</span></NavLink>
+                <NavLink className="navlink" to="/GoodTop" activeClassName="onactive"><span className="tabname">本周口碑榜</span></NavLink>
               </div>
 
             </div>

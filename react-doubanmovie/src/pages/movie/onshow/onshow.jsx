@@ -4,11 +4,13 @@ import { Route } from 'react-router-dom';
 import Scroll from '../../../common/scroll/Scroll';
 import { getmovieonshowlist } from '../../../api/apifun';
 import { createMovieListByItem } from '../../../model/movie'
-import Loading from '../../../common/loading/Loading'
-
+import Loading from '../../../common/loading/Loading';
+import Img from '../../../common/imgerror/Img';
+import defaultimg from '../../../assets/defaultimg.png';
 
 import './onshow.styl'
 import MovieInfo from '../movieinfo/movieinfo';
+
 
 
 class OnShow extends Component {
@@ -58,7 +60,7 @@ class OnShow extends Component {
         >
           <div className="left">
             <Lazyload>
-              <img src={this.getImage(movie.img)} width="64px" height="90px" alt="" />
+              <Img imageUrl={this.getImage(movie.img)} defaultImg={defaultimg}  alt="" />
             </Lazyload>
           </div>
           <div className="right">
