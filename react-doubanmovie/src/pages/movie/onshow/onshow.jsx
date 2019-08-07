@@ -8,8 +8,9 @@ import Loading from '../../../common/loading/Loading';
 import Img from '../../../common/imgerror/Img';
 import defaultimg from '../../../assets/defaultimg.png';
 
-import './onshow.styl'
-import MovieInfo from '../movieinfo/movieinfo';
+
+import './onshow.styl';
+import MovieInfo from '../../../container/movieinfo';
 
 
 

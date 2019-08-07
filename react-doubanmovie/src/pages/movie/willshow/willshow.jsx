@@ -7,7 +7,7 @@ import { createMovieListByItem } from '../../../model/movie';
 import Loading from '../../../common/loading/Loading'
 
 import './willshow.styl'
-import MovieInfo from '../movieinfo/movieinfo';
+import MovieInfo from '../../../container/movieinfo';
 import Img from '../../../common/imgerror/Img';
 import defaultimg from '../../../assets/defaultimg.png';
 

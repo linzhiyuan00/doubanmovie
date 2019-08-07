@@ -7,11 +7,13 @@ class Mine extends Component {
   }
   render() { 
       return (  
-        <div>
-          <div className="header">
-          我的
-        </div>
-        我的
+        <div className="mine-body">
+          <div className="user">
+            
+          </div>
+          <div className="mycollectlist">
+            
+          </div>
         </div>
       );
   }

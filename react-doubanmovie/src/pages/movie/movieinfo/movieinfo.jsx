@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import Header from '../../../common/header/Header';
 import Scroll from '../../../common/scroll/Scroll';
+import Img from '../../../common/imgerror/Img';
 import Lazyload, { forceCheck } from 'react-lazyload';
 import { getmovieinfo } from '../../../api/apifun';
 import { createMovieDetail } from '../../../model/movieinfo';
@@ -11,6 +12,7 @@ import star from '../../../assets/star.png';
 import halfstar from '../../../assets/halfstar.png';
 import nostar from '../../../assets/nostar.png';
 import arrow from '../../../assets/arrow.png';
+import defaultimg from '../../../assets/defaultimg.png';
 
 
 
@@ -62,7 +64,7 @@ class MovieInfo extends Component {
         <div className="cast" key={cast.id}>
           <div className="castimg">
             {/* <Lazyload> */}
-              <img src={this.getImage(cast.avatars)} width="65px" height="90px" alt="" />
+              <Img imageUrl={this.getImage(cast.avatars)} defaultImg={defaultimg} alt="" />
             {/* </Lazyload> */}
           </div>
           <div className="castname">
@@ -72,6 +74,19 @@ class MovieInfo extends Component {
       )
     })
   }
+  IfCollect = (id) =>{
+    console.log(this.props.showcollect)
+    var newcollectlist = [];
+    newcollectlist = this.props.showcollect;
+    for(let i = 0;i < newcollectlist.length;i++){
+      if(newcollectlist[i] === id){
+        this.props.changecollectstatetofalse(id)
+      }else{
+        this.props.changecollectstatetoture(id)
+      }
+    }
+    console.log(this.props.showcollect)
+  } 
   render() {
     const { movieinfo, castlist = [] } = this.state;
     const { refreshScroll } = this.state;
@@ -116,7 +131,7 @@ class MovieInfo extends Component {
             </div>
               <div className="movie-container">
                 <div className="movie-summary">
-                  <div className="buybtn">收藏</div>
+                  <div className="buybtn" onClick={()=>{this.IfCollect(movieinfo.id)}}>收藏</div>
                   <div className="introduce">
                     <input type="checkbox" id="introduce" />
                     <p>{movieinfo.summary}</p>
